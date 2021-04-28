@@ -10,9 +10,10 @@ const User = () => {
     useEffect(() => {
     setUser(userData);
     },[])
+// console.log("added messi", cart);
 
     const handleAddPlayer = (ur) => {
-        console.log('Player added', ur);
+        // console.log('Player added', ur);
         const newCart = [...cart, ur];
         setCart(newCart);
     }
@@ -27,8 +28,15 @@ const User = () => {
                 </ul>
             </div>
             <div className="cart-container">
-            <h2>This is cart </h2>
-            <h4>Total members: {cart.length} </h4>
+            <h1>Team Member</h1>
+            <h4>Total members: {cart.length}</h4>
+            <h3>Player name:
+                <ul>
+                    {
+                    cart.map( playerInfo => <li>{playerInfo.name}</li>)
+                    }
+                </ul>
+            </h3>
             </div>
 
         </div>
