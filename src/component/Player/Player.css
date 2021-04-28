@@ -2,11 +2,10 @@
     display: flex;
     border: 2px solid rgb(255, 196, 0);
     margin-bottom: 5px;
-    padding-left: 5px;
+    padding: 10px;
 }
 .img-size img {
     width: 200px;
-    margin-bottom: 15px;
 }
 .player-name {
     margin-left: 50px;

@@ -3,7 +3,7 @@ import './Player.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faUserPlus } from '@fortawesome/free-solid-svg-icons'
 const Player = (props) => {
-    console.log(props)
+    // console.log(props)
     const {name, image, value, position, Nationality} = props.player;
     return (
         <div className="player">
@@ -15,9 +15,12 @@ const Player = (props) => {
                 <p><small>Position: {position}</small></p>
                 <p><small>Nationality: {Nationality}</small></p>
                 <p><small>Value: {value}</small></p>
-                <button className="main-button"> <FontAwesomeIcon icon={faUserPlus} /> Add to team</button>
+                <button
+                 className="main-button"
+                 onClick={() => props.handleAddPlayer(props.player)}
+                 > 
+                 <FontAwesomeIcon icon={faUserPlus} /> Add to team</button>
             </div>
-            
         </div>
     );
 };
