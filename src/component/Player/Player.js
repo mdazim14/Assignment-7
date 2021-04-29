@@ -14,7 +14,7 @@ const Player = (props) => {
                 <h4>{name}</h4>
                 <p><small>Position: {position}</small></p>
                 <p><small>Nationality: {Nationality}</small></p>
-                <p><small>Value: {value}</small></p>
+                <p><small>Salary: {value}$ million</small></p>
                 <button
                  className="main-button"
                  onClick={() => props.handleAddPlayer(props.player)}

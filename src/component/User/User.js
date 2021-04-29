@@ -4,6 +4,7 @@ import userData from '../data/data.json';
 import { useEffect, useState } from 'react';
 import Player from '../Player/Player';
 import './User.css'
+import Cart from '../Cart/Cart';
 const User = () => {
     const [user, setUser] = useState([]);
     const [cart, setCart] = useState([]);
@@ -12,11 +13,12 @@ const User = () => {
     },[])
 // console.log("added messi", cart);
 
-    const handleAddPlayer = (ur) => {
-        // console.log('Player added', ur);
-        const newCart = [...cart, ur];
+    const handleAddPlayer = (player) => {
+        // console.log('Player added', player);
+        const newCart = [...cart, player];
         setCart(newCart);
     }
+    
     return (
         <div className="shop-container">
             <div className="player-container">
@@ -28,15 +30,7 @@ const User = () => {
                 </ul>
             </div>
             <div className="cart-container">
-            <h1>Team Member</h1>
-            <h4>Total members: {cart.length}</h4>
-            <h3>Player name:
-                <ul>
-                    {
-                    cart.map( playerInfo => <li>{playerInfo.name}</li>)
-                    }
-                </ul>
-            </h3>
+            <Cart cart={cart}></Cart>
             </div>
 
         </div>
