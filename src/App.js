@@ -9,7 +9,6 @@ function App() {
     <div>
       <Header></Header>
       <User></User>
-      
     </div>
   );
 }

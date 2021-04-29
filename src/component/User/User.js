@@ -11,7 +11,6 @@ const User = () => {
     useEffect(() => {
     setUser(userData);
     },[])
-// console.log("added messi", cart);
 
     const handleAddPlayer = (player) => {
         // console.log('Player added', player);

@@ -5,7 +5,7 @@ const Cart = (props) => {
     const total = cart.reduce( (total, player)=> total + player.value, 0)
     return (
         <div>
-            <h1>Team Member</h1>
+            <h2 className="text-danger">Team Member</h2>
             <h4>Total members: {cart.length}</h4>
             <p>Total budget: {total}$ million</p>
             <h3>Player name:

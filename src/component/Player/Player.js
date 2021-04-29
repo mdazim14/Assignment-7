@@ -16,10 +16,11 @@ const Player = (props) => {
                 <p><small>Nationality: {Nationality}</small></p>
                 <p><small>Salary: {value}$ million</small></p>
                 <button
-                 className="main-button"
+                 className="text-dark bg-warning
+                 rounded border-danger"
                  onClick={() => props.handleAddPlayer(props.player)}
                  > 
-                 <FontAwesomeIcon icon={faUserPlus} /> Add to team</button>
+                 <FontAwesomeIcon icon={faUserPlus}/> Add to team</button>
             </div>
         </div>
     );
