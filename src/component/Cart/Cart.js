@@ -11,7 +11,7 @@ const Cart = (props) => {
             <h3>Player name:
                 <div>
                     {
-                    cart.map( playerInfo => <div className="border m-2 p-2">{playerInfo.name} <small>{playerInfo.value}$</small></div>)
+                    cart.map( playerInfo => <div className="border text-white bg-success m-2 p-2">{playerInfo.name} <small className="text-warning">{playerInfo.value}$</small></div>)
                     }
                 </div>
             </h3>
