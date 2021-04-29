@@ -9,11 +9,11 @@ const Cart = (props) => {
             <h4>Total members: {cart.length}</h4>
             <p>Total budget: {total}$ million</p>
             <h3>Player name:
-                <ul>
+                <div>
                     {
-                    cart.map( playerInfo => <li>{playerInfo.name}</li>)
+                    cart.map( playerInfo => <div className="border m-2 p-2">{playerInfo.name} <small>{playerInfo.value}$</small></div>)
                     }
-                </ul>
+                </div>
             </h3>
         </div>
     );
